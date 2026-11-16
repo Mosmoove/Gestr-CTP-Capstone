@@ -7,6 +7,22 @@ Gestr is a desktop app concept that uses a webcam to recognize hand gestures and
 
 The goal is to experiment with gesture-based game control and learn how gesture recognition works. Gestr is not intended to replace a keyboard or connect directly to a specific game.
 
+## Collect a new gesture dataset
+
+On Windows, double-click **Collect Gestures.cmd**. On Mac, use
+**Collect Gestures.command**. They open a standalone webcam
+collector with a gesture dropdown, **Save sample** button, and **S** shortcut.
+First launch sets up its Python dependencies automatically; later launches work
+offline. The default webcam starts automatically. Enter your name and choose a
+gesture. Every save writes one
+labeled set of hand coordinates to your own session CSV under `data/raw/`.
+No photos are saved and no gesture classifier runs during collection.
+
+See [data/README.md](data/README.md) for team collection instructions and the CSV
+format. Suliman's earlier demo, dataset, and classifier are preserved under
+[deprecated/](deprecated/README.md). The Electron UI described below is a separate
+prototype and has not yet been connected to this collector.
+
 ## Desktop UI Prototype
 
 The current implementation is a **Windows desktop UI prototype** built with Electron and React. It includes Home, Mappings, Gesture Settings, and Camera, styled after the four supplied design references.
@@ -103,7 +119,9 @@ The technical work is expected to include three main parts:
 2. **Gesture recognition:** Collect and label examples of the selected gestures, then train a model to recognize gestures from hand information.
 3. **Keyboard input:** Connect recognized gestures to the keyboard keys selected by the player and test the controls on the chosen computer setup.
 
-The approach to hand-landmark detection is still undecided. The team plans to seek instructor guidance before making that choice.
+The current collection tool uses MediaPipe for hand landmarks. The team will
+collect a documented coordinate dataset and train its gesture classifier on that
+data. The earlier prototype remains available under `deprecated/` as a reference.
 
 ## Testing and Evaluation
 

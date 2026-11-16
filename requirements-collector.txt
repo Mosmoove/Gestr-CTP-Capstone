@@ -1,0 +1,7 @@
+# Only hand landmarks and the collection window; no gesture classifier required.
+mediapipe==1.2.3; sys_platform != 'darwin' or platform_machine != 'x86_64'
+opencv-contrib-python==5.0.0.93; sys_platform != 'darwin' or platform_machine != 'x86_64'
+# The current MediaPipe release has Apple Silicon wheels, but no Intel Mac wheel.
+mediapipe==0.10.21; sys_platform == 'darwin' and platform_machine == 'x86_64'
+opencv-contrib-python==4.11.0.86; sys_platform == 'darwin' and platform_machine == 'x86_64'
+Pillow==13.0.0

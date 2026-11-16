@@ -4,12 +4,12 @@ Pick a task, add your name beside it, and check it off when it is finished.
 
 - [x] Build the desktop UI prototype with Home, Mappings, Gesture Settings, and Camera tabs.
 - [x] Choose the first gestures, keyboard controls, and game for the demo.
-- [ ] Set up Python and MediaPipe to find hands and their finger and joint points.
-- [ ] Build a webcam preview that shows the hand points from MediaPipe.
-- [ ] Collect labeled pictures or short clips of each gesture from different people and lighting conditions.
-- [ ] Turn the hand points into labeled training data and include examples of no intended gesture.
+- [x] Set up Python and MediaPipe to find hands and their finger and joint points.
+- [x] Build a webcam preview that shows the hand points from MediaPipe.
+- [x] Build a manual collector with gesture labels and separate participant/session CSVs.
+- [ ] Collect labeled hand-coordinate samples from different people, sessions, and lighting conditions, including the neutral gesture.
 - [ ] Split the data into training, validation, and test sets, keeping people or recording sessions separate.
-- [ ] Train our own model to recognize gestures from the hand points.
+- [ ] Train and document a new gesture model using the team's collected dataset (earlier prototype preserved in deprecated/).
 - [ ] Use the validation set to improve the model and choose confidence and timing settings.
 - [ ] Run the model on live webcam frames and show the predicted gesture.
 - [ ] Connect the camera preview, predictions, and settings to the desktop UI.

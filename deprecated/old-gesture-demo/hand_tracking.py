@@ -9,7 +9,8 @@ from mediapipe.tasks import python
 from mediapipe.tasks.python import vision
 
 project_folder = Path(__file__).parent
-model_path = project_folder / "hand_landmarker.task"
+# The shared MediaPipe asset is still used by the new collector at the repo root.
+model_path = project_folder.parents[1] / "hand_landmarker.task"
 model = load(project_folder / "gesture_model.joblib")
 csv_path = project_folder / "gestures.csv"
 
